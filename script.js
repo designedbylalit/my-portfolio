@@ -60,6 +60,30 @@ if (whatsappForm) {
         const text = `Hi Lalit! I visited your portfolio and would like to connect.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
         const url = `https://wa.me/918949365393?text=${encodeURIComponent(text)}`;
 
-        window.open(url, "_blank");
+        // show toast animation
+        let toast = document.createElement("div");
+        toast.innerText = "Redirecting to WhatsApp...";
+        toast.style.position = "fixed";
+        toast.style.bottom = "30px";
+        toast.style.left = "50%";
+        toast.style.transform = "translateX(-50%)";
+        toast.style.background = "#00abf0";
+        toast.style.color = "#081b29";
+        toast.style.padding = "12px 24px";
+        toast.style.borderRadius = "8px";
+        toast.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
+        toast.style.fontWeight = "600";
+        toast.style.zIndex = "9999";
+        toast.style.opacity = "0";
+        toast.style.transition = "opacity 0.5s ease";
+
+        document.body.appendChild(toast);
+        setTimeout(() => (toast.style.opacity = "1"), 100);
+
+        setTimeout(() => {
+            window.open(url, "_blank");
+            toast.style.opacity = "0";
+            setTimeout(() => document.body.removeChild(toast), 500);
+        }, 2000);
     });
 }
