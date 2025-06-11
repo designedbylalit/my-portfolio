@@ -45,7 +45,7 @@ window.onscroll = () => {
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
 
-// ✅ Only WhatsApp redirect on contact form submit
+// ✅ WhatsApp message on contact form submit
 const whatsappForm = document.getElementById("whatsapp-form");
 if (whatsappForm) {
     whatsappForm.addEventListener("submit", function (e) {
@@ -57,7 +57,7 @@ if (whatsappForm) {
         const subject = document.getElementById("subject").value;
         const message = document.getElementById("message").value;
 
-        const text = `Hi Lalit! I visited your portfolio and would like to connect.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`;
+        const text = `Hi Lalit! I visited your portfolio and would like to connect.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
         const url = `https://wa.me/918949365393?text=${encodeURIComponent(text)}`;
 
         window.open(url, "_blank");
