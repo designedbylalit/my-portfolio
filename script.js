@@ -27,7 +27,6 @@ window.onscroll = () => {
             // active sections for animation on scroll
             sec.classList.add('show-animate');
         }
-        // if want to animation that repeats on scroll use this
         else {
             sec.classList.remove('show-animate');
         }
@@ -35,7 +34,6 @@ window.onscroll = () => {
 
     // sticky navbar
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
 
     // remove toggle icon and navbar when click navbar links (scroll)
@@ -44,6 +42,24 @@ window.onscroll = () => {
 
     // animation footer on scroll
     let footer = document.querySelector('footer');
-
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+}
+
+// ✅ Only WhatsApp redirect on contact form submit
+const whatsappForm = document.getElementById("whatsapp-form");
+if (whatsappForm) {
+    whatsappForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        const text = `Hi Lalit! I visited your portfolio and would like to connect.%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`;
+        const url = `https://wa.me/918949365393?text=${encodeURIComponent(text)}`;
+
+        window.open(url, "_blank");
+    });
 }
