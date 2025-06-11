@@ -62,17 +62,23 @@ if (whatsappForm) {
 
         // show toast animation
         let toast = document.createElement("div");
-        toast.innerText = "Redirecting to WhatsApp...";
+        toast.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 18px;">✅</span>
+              <span><strong>Redirecting to WhatsApp...</strong></span>
+            </div>
+        `;
         toast.style.position = "fixed";
         toast.style.bottom = "30px";
         toast.style.left = "50%";
         toast.style.transform = "translateX(-50%)";
         toast.style.background = "#00abf0";
         toast.style.color = "#081b29";
-        toast.style.padding = "12px 24px";
-        toast.style.borderRadius = "8px";
+        toast.style.padding = "14px 26px";
+        toast.style.borderRadius = "10px";
         toast.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
-        toast.style.fontWeight = "600";
+        toast.style.fontWeight = "500";
+        toast.style.fontSize = "14px";
         toast.style.zIndex = "9999";
         toast.style.opacity = "0";
         toast.style.transition = "opacity 0.5s ease";
@@ -87,3 +93,4 @@ if (whatsappForm) {
         }, 2000);
     });
 }
+
