@@ -1,96 +1,49 @@
-// toggle icon navbar
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+// Toggle mobile menu
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
 
-// scroll sections
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar a');
 
 window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 100;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      current = section.getAttribute('id');
+    }
+  });
 
-        if(top >= offset && top < offset + height) {
-            // active navbar links
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-            // active sections for animation on scroll
-            sec.classList.add('show-animate');
-        }
-        else {
-            sec.classList.remove('show-animate');
-        }
-    });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+};
 
-    // sticky navbar
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+// WhatsApp redirect on contact form submit
+const contactForm = document.getElementById("contact-form");
 
-    // remove toggle icon and navbar when click navbar links (scroll)
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    // animation footer on scroll
-    let footer = document.querySelector('footer');
-    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
-}
+    const name = document.querySelector("input[placeholder='Your Name']").value;
+    const email = document.querySelector("input[placeholder='Your Email']").value;
+    const message = document.querySelector("textarea[placeholder='Your Message']").value;
 
-// ✅ WhatsApp message on contact form submit
-const whatsappForm = document.getElementById("whatsapp-form");
-if (whatsappForm) {
-    whatsappForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+    const whatsappText = `Hi Lalit! I visited your portfolio and would like to connect.%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    const whatsappURL = `https://wa.me/918949365393?text=${whatsappText}`;
 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value;
-
-        const text = `Hi Lalit! I visited your portfolio and would like to connect.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
-        const url = `https://wa.me/918949365393?text=${encodeURIComponent(text)}`;
-
-        // show toast animation
-        let toast = document.createElement("div");
-        toast.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <span style="font-size: 18px;">✅</span>
-              <span><strong>Redirecting to WhatsApp...</strong></span>
-            </div>
-        `;
-        toast.style.position = "fixed";
-        toast.style.bottom = "30px";
-        toast.style.left = "50%";
-        toast.style.transform = "translateX(-50%)";
-        toast.style.background = "#00abf0";
-        toast.style.color = "#081b29";
-        toast.style.padding = "14px 26px";
-        toast.style.borderRadius = "10px";
-        toast.style.boxShadow = "0 5px 15px rgba(0,0,0,0.2)";
-        toast.style.fontWeight = "500";
-        toast.style.fontSize = "14px";
-        toast.style.zIndex = "9999";
-        toast.style.opacity = "0";
-        toast.style.transition = "opacity 0.5s ease";
-
-        document.body.appendChild(toast);
-        setTimeout(() => (toast.style.opacity = "1"), 100);
-
-        setTimeout(() => {
-            window.open(url, "_blank");
-            toast.style.opacity = "0";
-            setTimeout(() => document.body.removeChild(toast), 500);
-        }, 2000);
-    });
+    window.open(whatsappURL, "_blank");
+  });
 }
 
