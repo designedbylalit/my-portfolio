@@ -84,12 +84,16 @@ section {
 }
 
 .home {
-    display: flex;
-    align-items: center;
-    padding: 0 9%;
-    background: url('images/home.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9%;
+  min-height: 100vh;
+  background: url('images/home.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: relative;
 }
 
 .home-content {
@@ -992,6 +996,14 @@ span {
 }
 
 @media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    min-height: 100vh;
+  }
+
   .home-imgHover {
     display: none !important;
     width: 0 !important;
