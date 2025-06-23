@@ -981,5 +981,13 @@ span {
   pointer-events: none;
 }
 
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: #00abf0 !important;
+  text-decoration: none;
+}
 
 
