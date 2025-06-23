@@ -107,65 +107,81 @@
   </section>
 
   <!-- projects section design -->
-  <section class="education" id="projects">
-    <h2 class="heading">My <span>Projects</span><span class="animate scroll" style="--i:1;"></span></h2>
-    <div class="education-row">
-      <div class="education-column">
-        <h3 class="title">Web Projects<span class="animate scroll" style="--i:2;"></span></h3>
-        <div class="education-box">
-          <div class="education-content">
-            <div class="content">
-              <div class="year"><i class='bx bx-link'></i> <a href="https://www.neurobeads.com" target="_blank">neurobeads.com</a></div>
-              <h3>NEURO BEADS</h3>
-              <p>A real educational website promoting abacus training. Designed with clarity and trust in mind, especially for parents and students.</p>
-            </div>
-          </div>
-          <div class="education-content">
-            <div class="content">
-              <div class="year"><i class='bx bx-link'></i> <a href="https://www.technovasolutions.com" target="_blank">technovasolutions.com</a></div>
-              <h3>TechNova Solutions</h3>
-              <p>A bold mock tech startup site featuring modern visuals and professional design, built for digital-first impressions.</p>
-            </div>
-          </div>
-          <div class="education-content">
-            <div class="content">
-              <div class="year"><i class='bx bx-link'></i> <a href="https://www.greenleaforganics.com" target="_blank">greenleaforganics.com</a></div>
-              <h3>GreenLeaf Organics</h3>
-              <p>An eco-friendly business concept site with earthy tones and clean design — perfect for organic and green-focused brands.</p>
-            </div>
-          </div>
-          <span class="animate scroll" style="--i:3;"></span>
-        </div>
-      </div>
-      <div class="education-column">
-        <h3 class="title">More Projects<span class="animate scroll" style="--i:5;"></span></h3>
-        <div class="education-box">
-          <div class="education-content">
-            <div class="content">
-              <div class="year"><i class='bx bx-link'></i> <a href="https://www.nextgenstartup.com" target="_blank">nextgenstartup.com</a></div>
-              <h3>NextGen Startup</h3>
-              <p>A sleek and minimal landing page concept for startups and entrepreneurs — dynamic, bold, and ready to scale.</p>
-            </div>
-          </div>
-          <div class="education-content">
-            <div class="content">
-              <div class="year"><i class='bx bx-link'></i> <a href="https://www.pixelwavestudio.com" target="_blank">pixelwavestudio.com</a></div>
-              <h3>PixelWave Studio</h3>
-              <p>A vibrant creative agency concept with animated elements and strong design aesthetics tailored for creators.</p>
-            </div>
-          </div>
-          <div class="education-content">
-            <div class="content">
-              <div class="year"><i class='bx bx-link'></i> <a href="https://www.fittrackapp.com" target="_blank">fittrackapp.com</a></div>
-              <h3>FitTrack App</h3>
-              <p>A high-energy fitness tracking app landing page — uses bold colors, dynamic layout, and strong calls to action.</p>
-            </div>
-          </div>
-          <span class="animate scroll" style="--i:6;"></span>
-        </div>
-      </div>
+  <!-- 🔽 FILTERED PROJECTS SECTION -->
+<section class="projects-section" id="projects">
+  <h2 class="heading">My <span>Projects</span></h2>
+
+  <!-- 🔘 FILTER MENU -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="app">App</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+  </div>
+
+  <!-- 🧱 PROJECT CARDS -->
+  <div class="project-grid">
+    <!-- Project 1 -->
+    <div class="project-card web">
+      <h3>NEURO BEADS</h3>
+      <p>An educational website promoting abacus training. Designed for clarity and trust.</p>
+      <a href="https://www.neurobeads.com" target="_blank">neurobeads.com</a>
     </div>
-  </section>
+
+    <!-- Project 2 -->
+    <div class="project-card web">
+      <h3>GreenLeaf Organics</h3>
+      <p>A clean, eco-friendly website concept for organic product businesses.</p>
+      <a href="https://www.greenleaforganics.com" target="_blank">greenleaforganics.com</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card web">
+      <h3>CodeSprint Pro</h3>
+      <p>A competitive coding contest platform with live leaderboards and judging.</p>
+      <a href="https://www.codesprintpro.com" target="_blank">codesprintpro.com</a>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card app">
+      <h3>EduWave LMS</h3>
+      <p>A mobile-first LMS for managing classes, assignments, and feedback.</p>
+      <a href="https://www.eduwavelms.com" target="_blank">eduwavelms.com</a>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card design">
+      <h3>LensCraft</h3>
+      <p>Photo editing UI concept with layers, effects, and advanced controls.</p>
+      <a href="https://www.lenscraftstudio.com" target="_blank">lenscraftstudio.com</a>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card web">
+      <h3>NextGen Startup</h3>
+      <p>A bold landing page concept for upcoming tech startups and creators.</p>
+      <a href="https://www.nextgenstartup.com" target="_blank">nextgenstartup.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- 🔧 FILTER SCRIPT -->
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.filter-btn.active')?.classList.remove('active');
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+      projectCards.forEach(card => {
+        card.style.display = (filter === 'all' || card.classList.contains(filter)) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
 
   <!-- contact section design -->
   <section class="contact" id="contact">
