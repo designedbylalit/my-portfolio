@@ -977,7 +977,8 @@ span {
 
 /* Final fix: Remove black flicker in contact section */
 .contact .animate.scroll {
-  background: var(--second-bg-color) !important;
+  background: #112e42 !important;
   pointer-events: none;
 }
+
 
