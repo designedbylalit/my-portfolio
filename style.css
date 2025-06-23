@@ -994,10 +994,47 @@ span {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .home {
-    background-position: top center !important;
-  }
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 9%;
+  min-height: 100vh;
+  background: var(--bg-color);
+  position: relative;
 }
 
+.home-image-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
 
+.home-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .home-image-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .home-sci {
+    position: static;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+}
