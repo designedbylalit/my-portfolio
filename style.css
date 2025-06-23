@@ -975,8 +975,11 @@ span {
   background: var(--bg-color);
 }
 
-/* FINAL fix for contact section animation background */
+/* Final fix: Remove black flicker in contact section */
 .contact .animate.scroll {
   background: var(--second-bg-color) !important;
+  width: 0 !important; /* ensures the animation span is collapsed after scroll */
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
