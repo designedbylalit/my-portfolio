@@ -981,11 +981,12 @@ span {
   pointer-events: none;
 }
 
-a,
-a:visited,
-a:hover,
-a:active,
-a:focus {
+/* Only make links inside the Projects section blue */
+#projects a,
+#projects a:visited,
+#projects a:hover,
+#projects a:active,
+#projects a:focus {
   color: #00abf0 !important;
   text-decoration: none;
 }
