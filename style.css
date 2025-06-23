@@ -995,10 +995,20 @@ span {
 }
 
 @media (max-width: 768px) {
+  .home {
+    background-position: top center !important;
+  }
+
   .home-imgHover {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
+  }
+
+  .home-sci {
+    position: static;
+    justify-content: center;
+    margin-top: 2rem;
   }
 }
 
