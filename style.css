@@ -974,3 +974,9 @@ span {
 .education .animate.scroll {
   background: var(--bg-color);
 }
+
+/* FINAL fix for contact section animation background */
+.contact .animate.scroll {
+  background: var(--second-bg-color) !important;
+}
+
