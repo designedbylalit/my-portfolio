@@ -2,275 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
-    <link rel="stylesheet" href="css/media_query.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Lalit Manda</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Header design section -->
-    <header>
-        <div class="header-nav-bar container flex">
-            <div class="logo">Portfolio</div>
-            <i class='bx bx-menu' id="Menu-card"></i>
-            <nav class="nav-bar-items">
-                <a href="#home-container" id="home" class="active">Home</a>
-                <a href="#about-section" id="about">About</a>
-                <a href="#service-section" id=" services ">Services</a>
-                <a href="#portfolio-div" id="portfolio">Portfolio</a>
-                <a href="https://www.instagram.com/_manda_lalit_07" id=" contact ">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <!-- Home design section -->
-    <main>
-        <section class=" head-img-intro flex container " id=" home-container ">
-            <div class="intro-content">
-                <h3 class=" intro-start ">Hello, It's Me</h3>
-                <h2 class=" intro-name ">Lalit Manda</h2>
-                <h3 class=" intro-last ">And I'm
-                    <span class=" profession ">
-                        Web Designer & Developer
-                    </span>
-                </h3>
-                <p class="intro-main">
-                    I craft modern, fast, and responsive websites with engaging designs and clear code. Temporibus expedita recusandae molestiae
-                    perferendis! Inventore eaque provident tempora pariatur similique a.
-                </p>
-                <div class=" social-media ">
-                    <a href="https://www.instagram.com/_manda_lalit_07" class="icons">
-                        <i class=" fa-brands fa-github-alt "></i>
-                    </a>
-                    <a href="https://www.instagram.com/_manda_lalit_07" class=" icons ">
-                        <i class=" fa-brands fa-linkedin-in "></i>
-                    </a>
-                    <a href=" # " class=" icons ">
-                        <i class=" fa-brands fa-envelope "></i>
-                    </a>
-                    <a href="https://www.instagram.com/_manda_lalit_07" class=" icons ">
-                        <i class=" fa-brands fa-instagram "></i>
-                    </a>
-                </div>
-                <div class="resume-links">
-                    <a href="#"
-                        class="cv-resume btn-cls" target="new">Download CV</a>
-                </div>
-            </div>
-            <div class=" main-img ">
-                <img src=" ./assets/main_img.png " alt=" ">
-            </div>
-        </section>
-        <!-- About section -->
-        <section class="section-about" id="">
-            <div class="container flex about-section" id="about-section">
-                <div class=" about-image ">
-                    <img src=" ./assets/intro-image.png " alt=" ">
-                </div>
-                <div class=" about-content ">
-                    <h3 class=" heading ">
-                        About <span class=" Me ">Me</span>
+  <!-- header design -->
+  <header class="header">
+    <a href="#" class="logo">Lalit<span class="animate" style="--i:1;"></span></a>
+    <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <span class="active-nav"></span>
+      <span class="animate" style="--i:2;"></span>
+    </nav>
+  </header>
 
-                    </h3>
-                    <h2 class=" profession ">Web Designer & Developer</h2>
-                    <p class=" intro-about-me ">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur molestiae accusantium
-                        tempora
-                        suscipit vel nobis minus unde, accusamus facilis ea distinctio officia aliquam error,
-                        repudiandae
-                        modi quas asperiores ratione. Perspiciatis in rerum
-                        libero totam provident odio nostrum repudiandae quam
-                    </p>
-                    <div class="making-center flex-column" style="align-items: center;">
+  <!-- home section design -->
+  <section class="home show-animate" id="home">
+    <div class="home-content">
+      <h1>Hi, I'm <span>Lalit Manda</span><span class="animate" style="--i:2;"></span></h1>
+      <div class="text-animate">
+        <h3>Web Developer and Designer</h3>
+        <span class="animate" style="--i:3;"></span>
+      </div>
+      <p>
+        Hi, I’m Lalit Manda — a tech enthusiast and creative problem-solver with a passion for bringing ideas to life through innovation and design. From building intuitive interfaces to leading projects like NextGen and Neurobeads, I thrive on turning vision into reality.
+        <span class="animate" style="--i:4;"></span>
+      </p>
+      <div class="btn-box">
+      <a href="https://wa.me/918949365393?text=Hi%20Lalit%2C%20let's%20connect%20regarding%20a%20project%20or%20collaboration." target="_blank" class="btn">Connect</a>
+        <a href="https://wa.me/918949365393?text=Hi%20Lalit%2C%20let's%20talk%20about%20a%20collaboration%20or%20opportunity." target="_blank" class="btn">Let’s Talk</a>
+        <span class="animate" style="--i:5;"></span>
+      </div>
+    </div>
+    <div class="home-sci">
+      <a href="https://www.instagram.com/_manda_lalit_07/" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <span class="animate" style="--i:6;"></span>
+    </div>
+    <div class="home-imgHover"></div>
+    <span class="animate home-img" style="--i:7;"></span>
+  </section>
 
-                        <div class=" btn-cls about-read-more ">
-                            <a href="https://www.instagram.com/_manda_lalit_07" class=" read-more ">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- about section design -->
+  <section class="about" id="about">
+    <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+    <div class="about-img">
+      <img src="images/about.jpg" alt="Lalit Manda" />
+      <span class="circle-spin"></span>
+      <span class="animate scroll" style="--i:2;"></span>
+    </div>
+    <div class="about-content">
+      <h3>Hi there! Glad to see you here.<span class="animate scroll" style="--i:3;"></span></h3>
+      <p>
+        Hello! I'm Lalit Manda, a web developer and designer passionate about merging creativity with code.
+        I specialize in modern, user-friendly web experiences and enjoy crafting everything from startup websites to creative interfaces.
+        <span class="animate scroll" style="--i:4;"></span>
+      </p>
+      <div class="btn-box btns">
+        <a href="#contact" class="btn">Contact Me</a>
+        <span class="animate scroll" style="--i:5;"></span>
+      </div>
+    </div>
+  </section>
 
-        <!-- Service section -->
+  <!-- skills section design -->
+<!-- project section design -->
+<section class="education" id="projects">
+  <h2 class="heading">My <span>Projects</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-        <section class="service" id="service-section">
-            <div class="container">
-                <div class="heading">
-                    <h2>Our <span class="Me">Service</span></h2>
-                </div>
-                <div class="service-offfer flex">
-                    <div class="Web-development boxes-service">
-                        <div class="logo"><i class="fa-solid fa-code"></i>
-                            </i>
-                        </div>
+  <div class="education-row">
+    <div class="education-column">
+      <h3 class="title">Web Projects<span class="animate scroll" style="--i:2;"></span></h3>
 
-                        <div class="service-heading">
-                            <h3>Web Development</h3>
-                        </div>
-
-                        <p class="intro">I craft modern, fast, and responsive websites with engaging designs and clear code. Dicta aperiam fugiat
-                            omnis
-                            beatae voluptatum recusandae consequuntur impedit nisi debitis soluta!</p>
-
-                        <button class="btn-cls service-btn">Read More</button>
-                    </div>
-                    <div class="Python-development boxes-service">
-                        <div class="logo"> <i class="fa-brands fa-python"></i></div>
-
-                        <div class="service-heading">
-                            <h3>Python</h3>
-                        </div>
-
-                        <p class="intro">I craft modern, fast, and responsive websites with engaging designs and clear code. Dicta aperiam fugiat
-                            omnis
-                            beatae voluptatum recusandae consequuntur impedit nisi debitis soluta!</p>
-                        <button class="btn-cls service-btn">Read More</button>
-
-                    </div>
-                    <div class="MachineLearning boxes-service ">
-                        <div class="logo">
-                            <i class="fa-solid fa-brain-circuit"></i>
-                        </div>
-
-                        <div class="service-heading">
-                            <h3>Machine Learning</h3>
-                        </div>
-
-                        <p class="intro">I craft modern, fast, and responsive websites with engaging designs and clear code. Dicta aperiam fugiat
-                            omnis
-                            beatae voluptatum recusandae consequuntur impedit nisi debitis soluta!</p>
-                        <button class="btn-cls service-btn">Read More</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Portfolio section -->
-
-    <section class="project portfolio" id="portfolio-section-id">
-        <div class="container" id="portfolio-div">
-            <h2 class="heading">Latest <span class="Me">Project</span></h2>
-            <div class="project-container ">
-                <div class="box-project">
-                    <!-- <div class="box-project"> -->
-                    <img src="./assets/helmet.jpeg" alt="" srcset="">
-                    <div class="info-layer flex-column">
-
-                        <h3>Helmet detection</h3>
-                        <p class="intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
-                            reprehenderit
-                            quis
-                            dolore fugit laboriosam suscipit voluptatibus repellat voluptates recusandae minima!</p>
-                    </div>
-                    <!-- </div> -->
-                </div>
-                <div class="box-project">
-                    <img src="./assets/web-dev.jpg" alt="" srcset="">
-                    <div class="info-layer flex-column info-layer1">
-
-                        <h3 cl>Web Development</h3>
-                        <p class="intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo reprehenderit
-                            quis
-                            dolore fugit laboriosam suscipit voluptatibus repellat voluptates recusandae minima!</p>
-                    </div>
-                </div>
-                <div class="box-project ">
-                    <img src="./assets/leaf-green.jpg" alt="" srcset="">
-                    <div class="info-layer flex-column info-layer2">
-                        <h3>Leaf Detection</h3>
-                        <p class="intro">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo reprehenderit
-                            quis
-                            dolore fugit laboriosam suscipit voluptatibus repellat voluptates recusandae minima!</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section class="contact-us">
-        <div class="container flex contact-us-container">
-            <div class=" box-links">
-                <h3 class="contact-us-heading">Personal Brand</h3>
-                <div class="content">
-
-                    <p class="intro-contact">
-                        I craft modern, fast, and responsive websites with engaging designs and clear code. Itaque repellat ratione consequuntur
-                        numquam, praesentium ex. Ratione placeat omnis dolorum recusandae.
-                    </p>
-                    <div class="social-media">
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="company-intro box-links">
-                <h3 class="contact-us-heading">Company</h3>
-                <div class="content">
-
-                    <ul class="contact-us-list">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Service</li>
-                        <li>FAQ</li>
-                        <li>Review</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="company-Explore box-links">
-                <h3 class="contact-us-heading">Explore</h3>
-                <div class="content">
-                    <ul class="contact-us-list">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Service</li>
-                        <li>FAQ</li>
-                        <li>Review</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="company-Explore box-links">
-                <h3 class="contact-us-heading">Get Started</h3>
-                <div class="content">
-
-                    <ul class="contact-us-list">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Service</li>
-                        <li>FAQ</li>
-                        <li>Review</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="box-links">
-                <h3 class="contact-us-heading">News letter</h3>
-                <div class="content">
-                    <p class="intro-contact">
-                        I craft modern, fast, and responsive websites with engaging designs and clear code. Itaque repellat ratione consequuntur
-                        numquam, praesentium ex. Ratione placeat omnis dolorum recusandae.
-                    </p>
-                    <div class="social-media-contact">
-                        <input type="email" name="" id="emailInput" placeholder="Email">
-                        <input type="submit" value="Subscribe">
-                    </div>
-                </div>
-            </div>
-
+      <div class="education-box">
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class='bx bx-link'></i> <a href="https://www.lenscraftstudio.com" target="_blank">lenscraftstudio.com</a></div>
+            <h3>LensCraft</h3>
+            <p>A photo editor UI concept for creative professionals. Designed with clean layers, rich visuals, and fluid transitions.</p>
+          </div>
         </div>
 
-    </section>
-    <div class="script-4-header"></div>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class='bx bx-link'></i> <a href="https://www.neurobeads.com" target="_blank">neurobeads.com</a></div>
+            <h3>NEURO BEADS</h3>
+            <p>A real educational website promoting abacus training. Designed with clarity and trust in mind, especially for parents and students.</p>
+          </div>
+        </div>
 
-    <script src="./JS/index.js"></script>
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class='bx bx-link'></i> <a href="https://www.greenleaforganics.com" target="_blank">greenleaforganics.com</a></div>
+            <h3>GreenLeaf Organics</h3>
+            <p>An eco-friendly business concept site with earthy tones and clean design — perfect for organic and green-focused brands.</p>
+          </div>
+        </div>
+
+        <span class="animate scroll" style="--i:3;"></span>
+      </div>
+    </div>
+
+    <div class="education-column">
+      <h3 class="title">More Projects<span class="animate scroll" style="--i:5;"></span></h3>
+
+      <div class="education-box">
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class='bx bx-link'></i> <a href="https://www.nextgenstartup.com" target="_blank">nextgenstartup.com</a></div>
+            <h3>NextGen Startup</h3>
+            <p>A sleek and minimal landing page concept for startups and entrepreneurs — dynamic, bold, and ready to scale.</p>
+          </div>
+        </div>
+
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class='bx bx-link'></i> <a href="https://www.innocorelabs.com" target="_blank">innocorelabs.com</a></div>
+            <h3>InnoCore Labs</h3>
+            <p>A modern SaaS/innovation agency landing page. Focused on clean UI, bold headings, and product-first storytelling for tech teams.</p>
+          </div>
+        </div>
+
+        <div class="education-content">
+          <div class="content">
+            <div class="year"><i class='bx bx-link'></i> <a href="https://www.snapkart.store" target="_blank">snapkart.store</a></div>
+            <h3>SnapKart</h3>
+            <p>An e-commerce homepage concept with hero sections, featured products, and category-based layouts — designed for online stores.</p>
+          </div>
+        </div>
+
+        <span class="animate scroll" style="--i:6;"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- contact section design -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+    <form id="whatsapp-form">
+      <div class="input-box">
+        <div class="input-field"><input type="text" id="name" placeholder="Full Name" required /><span class="focus"></span></div>
+        <div class="input-field"><input type="email" id="email" placeholder="Email Address" required /><span class="focus"></span></div>
+        <span class="animate scroll" style="--i:3;"></span>
+      </div>
+      <div class="input-box">
+        <div class="input-field"><input type="text" id="phone" placeholder="Mobile Number" required /><span class="focus"></span></div>
+        <div class="input-field"><input type="text" id="subject" placeholder="Email Subject" required /><span class="focus"></span></div>
+        <span class="animate scroll" style="--i:5;"></span>
+      </div>
+      <div class="textarea-field"><textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea><span class="focus"></span><span class="animate scroll" style="--i:7;"></span></div>
+      <div class="btn-box btns"><button type="submit" class="btn">Send Message</button><span class="animate scroll" style="--i:9;"></span></div>
+    </form>
+  </section>
+
+  <!-- footer design -->
+  <footer class="footer">
+    <div class="footer-text">
+      <p>&copy; 2025 | Designed and Maintained by Lalit Manda | All Rights Reserved</p>
+      <span class="animate scroll" style="--i:1;"></span>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+      <span class="animate scroll" style="--i:3;"></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
+
+
