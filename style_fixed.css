@@ -87,7 +87,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('images/home.jpg') no-repeat;
+    background: url('/images/home.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -704,9 +704,8 @@ span {
     right: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-color); /* ensures home animation works */
+    background: var(--bg-color);
     z-index: 98;
-    pointer-events: none;
 }
 
 .animate.home-img {
@@ -723,10 +722,13 @@ span {
 
 .animate.scroll {
     transition: 1s ease;
-    transition-delay: calc(0.3s * var(--i));
+    transition-delay: calc(.3s / var(--i));
     animation: none;
-    background: var(--second-bg-color); /* Matches about, skills sections */
-    pointer-events: none;
+}
+
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll {
+    background: var(--second-bg-color);
 }
 
 .education .education-box .animate.scroll {
@@ -959,36 +961,52 @@ span {
     }
 }
 
-/* === Section-specific animation background fix === */
+/* === RESPONSIVE FIXES (added by ChatGPT) === */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+  }
 
-.home .animate {
-  background: var(--bg-color);
+  .home-content {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content .text-animate h3 {
+    font-size: 2.5rem;
+  }
+
+  .btn-box {
+    flex-direction: column;
+    gap: 1rem;
+    width: auto;
+    align-items: center;
+  }
+
+  .home-sci {
+    position: static;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .home-imgHover {
+    display: none;
+  }
 }
 
-.about .animate.scroll,
-.skills .animate.scroll,
-.contact .animate.scroll {
-  background: var(--second-bg-color);
+.logo {
+  font-size: 2.4rem;
+  flex-shrink: 0;
 }
 
-.education .animate.scroll {
-  background: var(--bg-color);
+.header {
+  flex-wrap: nowrap;
 }
-
-/* ✅ FINAL FIX for Contact flicker (matches body background) */
-.contact .animate.scroll {
-  background: #081b29 !important;
-  pointer-events: none;
-}
-
-/* Only make links inside the Projects section blue */
-#projects a,
-#projects a:visited,
-#projects a:hover,
-#projects a:active,
-#projects a:focus {
-  color: #00abf0 !important;
-  text-decoration: none;
-}
-
-
