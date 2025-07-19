@@ -1001,5 +1001,8 @@ section:nth-child(odd) .animate.scroll,
   pointer-events: none !important;
   position: absolute !important;
 }
+.contact .animate.scroll {
+  display: none !important;
+}
 
 	
