@@ -721,9 +721,16 @@ span {
 }
 
 .animate.scroll {
-  transition: 1s ease;
-  transition-delay: calc(0.3s * var(--i));
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
   pointer-events: none;
+  animation: showRight 1s ease forwards;
+  transition-delay: calc(0.3s * var(--i));
 }
 
 section:nth-child(odd) .animate.scroll,
