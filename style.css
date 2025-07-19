@@ -721,9 +721,11 @@ span {
 }
 
 .animate.scroll {
-    transition: 1s ease;
-    transition-delay: calc(.3s / var(--i));
-    animation: none;
+  transition: 1s ease;
+  transition-delay: calc(0.3s * var(--i));
+  animation: none;
+  background: none !important;
+  pointer-events: none;
 }
 
 section:nth-child(odd) .animate.scroll,
@@ -975,3 +977,12 @@ section:nth-child(odd) .animate.scroll,
 .education .animate.scroll {
   background: var(--bg-color);
 }
+.skills .animate.scroll {
+  background: #112e42 !important; /* same as skills section bg */
+}
+
+.education .animate.scroll {
+  background: #081b29 !important; /* same as projects section bg */
+}
+
+	
