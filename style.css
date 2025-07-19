@@ -723,8 +723,6 @@ span {
 .animate.scroll {
   transition: 1s ease;
   transition-delay: calc(0.3s * var(--i));
-  animation: none;
-  background: none !important;
   pointer-events: none;
 }
 
@@ -984,5 +982,6 @@ section:nth-child(odd) .animate.scroll,
 .education .animate.scroll {
   background: #081b29 !important; /* same as projects section bg */
 }
+
 
 	
