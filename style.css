@@ -982,6 +982,9 @@ section:nth-child(odd) .animate.scroll,
 .education .animate.scroll {
   background: #081b29 !important; /* same as projects section bg */
 }
+.contact .animate.scroll {
+  background: #112e42 !important; /* same as Contact section background */
+}
 
 
 	
