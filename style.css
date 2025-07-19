@@ -966,12 +966,6 @@ section:nth-child(odd) .animate.scroll,
   background: var(--bg-color);
 }
 
-.about .animate.scroll,
-.skills .animate.scroll,
-.contact .animate.scroll {
-  background: var(--second-bg-color);
-}
-
 .education .animate.scroll {
   background: var(--bg-color);
 }
@@ -982,33 +976,14 @@ section:nth-child(odd) .animate.scroll,
 .education .animate.scroll {
   background: #081b29 !important; /* same as projects section bg */
 }
-.contact .animate.scroll {
-  background: #112e42 !important; /* same as Contact section background */
-}
-.contact .animate.scroll {
-  background-color: #112e42 !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
-}
-.contact .animate.scroll {
-  background: #112e42 !important;   /* exactly matches contact section bg */
-  z-index: -1 !important;           /* hides it behind everything */
-  pointer-events: none !important;
-}
-.contact .animate.scroll {
-  background: #112e42 !important;   /* Matches contact section background */
-  z-index: -10 !important;          /* Push it way behind the form */
-  pointer-events: none !important;
-  position: absolute !important;
-}
-.contact .animate.scroll {
-  display: none !important;
-}
-/* Final fix for contact section animation without black box */
+/* ✅ Final Fix: Smooth animation for contact section, no black box */
 .contact .animate.scroll {
   background: none !important;
   z-index: -1 !important;
   pointer-events: none !important;
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
   animation: showRight 1s ease forwards !important;
 }
 
