@@ -960,3 +960,18 @@ section:nth-child(odd) .animate.scroll,
         width: 0;
     }
 }
+/* === Section-specific animation background fix === */
+
+.home .animate {
+  background: var(--bg-color);
+}
+
+.about .animate.scroll,
+.skills .animate.scroll,
+.contact .animate.scroll {
+  background: var(--second-bg-color);
+}
+
+.education .animate.scroll {
+  background: var(--bg-color);
+}
