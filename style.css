@@ -985,6 +985,11 @@ section:nth-child(odd) .animate.scroll,
 .contact .animate.scroll {
   background: #112e42 !important; /* same as Contact section background */
 }
+.contact .animate.scroll {
+  background-color: #112e42 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
 
 
 	
