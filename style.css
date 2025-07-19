@@ -979,7 +979,7 @@ section:nth-child(odd) .animate.scroll,
 
 /* Trigger animation only when section becomes visible */
 .contact.show-animate .animate.scroll {
-  animation: showRight 1s ease forwards !important;
+  animation: showRight 2s ease forwards !important;
   background: none !important;
   z-index: -1 !important;
   position: absolute !important;
