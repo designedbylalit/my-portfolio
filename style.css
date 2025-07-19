@@ -995,5 +995,11 @@ section:nth-child(odd) .animate.scroll,
   z-index: -1 !important;           /* hides it behind everything */
   pointer-events: none !important;
 }
+.contact .animate.scroll {
+  background: #112e42 !important;   /* Matches contact section background */
+  z-index: -10 !important;          /* Push it way behind the form */
+  pointer-events: none !important;
+  position: absolute !important;
+}
 
 	
