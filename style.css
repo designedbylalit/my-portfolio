@@ -704,8 +704,9 @@ span {
     right: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-color);
+    background: var(--bg-color); /* ensures home animation works */
     z-index: 98;
+    pointer-events: none;
 }
 
 .animate.home-img {
@@ -721,21 +722,11 @@ span {
 }
 
 .animate.scroll {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--second-bg-color);
-  z-index: -1;
-  pointer-events: none;
-  animation: showRight 1s ease forwards;
-  transition-delay: calc(0.3s * var(--i));
-}
-
-section:nth-child(odd) .animate.scroll,
-.footer .animate.scroll {
-    background: var(--second-bg-color);
+    transition: 1s ease;
+    transition-delay: calc(0.3s * var(--i));
+    animation: none;
+    background: var(--second-bg-color); /* Matches about, skills sections */
+    pointer-events: none;
 }
 
 .education .education-box .animate.scroll {
@@ -967,33 +958,37 @@ section:nth-child(odd) .animate.scroll,
         width: 0;
     }
 }
+
 /* === Section-specific animation background fix === */
 
 .home .animate {
   background: var(--bg-color);
 }
 
+.about .animate.scroll,
+.skills .animate.scroll,
+.contact .animate.scroll {
+  background: var(--second-bg-color);
+}
+
 .education .animate.scroll {
   background: var(--bg-color);
 }
-.skills .animate.scroll {
-  background: #112e42 !important; /* same as skills section bg */
+
+/* ✅ FINAL FIX for Contact flicker (matches body background) */
+.contact .animate.scroll {
+  background: #081b29 !important;
+  pointer-events: none;
 }
 
-.education .animate.scroll {
-  background: #081b29 !important; /* same as projects section bg */
-}
-
-/* Trigger animation only when section becomes visible */
-.contact.show-animate .animate.scroll {
-  animation: showRight 2s ease forwards !important;
-  background: none !important;
-  z-index: -1 !important;
-  position: absolute !important;
-  width: 100%;
-  height: 100%;
-  pointer-events: none !important;
+/* Only make links inside the Projects section blue */
+#projects a,
+#projects a:visited,
+#projects a:hover,
+#projects a:active,
+#projects a:focus {
+  color: #00abf0 !important;
+  text-decoration: none;
 }
 
 
-	
