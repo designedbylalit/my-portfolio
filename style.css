@@ -1004,5 +1004,12 @@ section:nth-child(odd) .animate.scroll,
 .contact .animate.scroll {
   display: none !important;
 }
+/* Final fix for contact section animation without black box */
+.contact .animate.scroll {
+  background: none !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  animation: showRight 1s ease forwards !important;
+}
 
 	
